@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#lead{
+    position: absolute;
+    top: 10%;
+}
+
+#playArea{
+    width: 80vw;
+    height: 70vh;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: black;
+    margin-top: 20px;
+
+}
+
+#backgroundImg{
+    height: 80vw;
+    width: auto;
+    overflow: hidden;
+    
+}
+
+
+
+#gameOver{
+    display: none;
+    position: absolute;
+    border-style: solid ;
+    border-width: 5px;
+    border-radius:  10px; 
+    height: 60vh;
+}
+
+
+#score{
+    position: absolute;
+    top: 50px;
+    right: 160px;
+    
+    font-size: 20px;
+}
