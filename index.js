@@ -45,8 +45,8 @@ const OBSTACLE_HEIGHT_RATIO = 1 / 6;
 const HIGH_OBSTACLE_WIDTH_RATIO = 1 / 3
 const HIGH_OBSTACLE_HEIGHT_RATIO = 1 / 15;
 const GROUND_HEIGHT_RATIO = 2 / 3;
-const GRAVITY = 0.2;//重力加速度→滞空时间
-const JUMP_SPEED_INITIAL = -10;//初始跳跃速度
+const GRAVITY = 0.15;//重力加速度→滞空时间
+const JUMP_SPEED_INITIAL = -8;//初始跳跃速度
 
 // 变量部分
 let obstacleSpeed = -3;//障碍物移动速度，随游戏进行，速度加快
@@ -223,7 +223,7 @@ function gameLoop() {
 
 
     // 一定时间生成新的障碍物
-    if (Date.now() - lastObstacleTime > 3000) { 
+    if (Date.now() - lastObstacleTime > 2000) { 
         createObstacle();
         lastObstacleTime = Date.now();
     }
@@ -252,6 +252,7 @@ setInterval(function() {
     if(!isGameOver){
         score += 100;
         scoreElement.innerHTML = "得分：" + score;
+        obstacleSpeed -= 0.5;
     }
     
 },3000);
